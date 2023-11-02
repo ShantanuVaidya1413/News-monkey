@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 
 const News = (props) => {
 
+
   const [articles, setArticles] = useState([])
   const [loading, setLoading] = useState(false)
   const [page, setPage] = useState(1)
@@ -13,7 +14,7 @@ const News = (props) => {
 
   const updateNews = async () => {
     console.log(page)
-    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=5670524132d0463094ae30327487fd1c&page=${page}&pageSize=${props.pageSize}`
+    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`
 
     setLoading(true)
 
