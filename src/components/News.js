@@ -80,7 +80,7 @@ const News = (props) => {
 
       <div className="row">
         {/* if loading is true then dont display any content */}
-        {!loading && articles.map((element) => {
+        {!loading && articles?.map((element) => {
           return <div className="col-md-4" key={element.url}>
             <NewsItem title={element.title} description={element.description} imgUrl={element.urlToImage ? element.urlToImage : "https://imgeng.jagran.com/images/2023/jul/samsung-galaxy-s23-series1690700599415.jpg"} newsUrl={element.url} author={element.author} date={element.publishedAt} source={element.source.name} />
           </div>
